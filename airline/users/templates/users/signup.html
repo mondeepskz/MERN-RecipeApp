@@ -1,0 +1,25 @@
+{% extends "users/layout.html" %}
+
+{% block body%}
+    <h2>Sign Up</h2>
+   <form action="{% url 'users:signup' %}" method="post">
+
+       {% csrf_token %}
+            <label for="">Username</label>
+            <input type="text" name="username" placeholder="Username">
+
+            <label for="">First Name</label>
+            <input type="text" name="first" placeholder="first">
+            
+            <label for="">Last Name</label>
+            <input type="text" name="last" placeholder="last">
+
+            <label for="">Email</label>
+            <input type="email" name="email" placeholder="Email">
+
+            <label for="">Password</label>
+            <input type="password" name="password" placeholder="Password">
+
+            <button type="submit">Sign Up</button>
+   </form>
+{% endblock %}
